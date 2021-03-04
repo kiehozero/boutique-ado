@@ -12,8 +12,15 @@
 {% block content %}
     <div class="container header-container">
         <div class="row">
-            <div class="col">
-                {{ products }}
+            <div class="col my-auto">
+                {% for product in products %}
+                    <div>
+                        <h5>{{ product.name }}</h5>
+                        <p>{{ product.sku }}</p>
+                        <img src="{{ product.image_url }}">
+                    </div>
+
+                {% endfor %}
             </div>
         </div>
     </div>
