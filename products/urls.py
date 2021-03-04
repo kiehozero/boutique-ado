@@ -5,5 +5,5 @@ from . import views
 # . means to import from the current directory
 
 urlpatterns = [
-    path('', views.index, name='home')
+    path('', views.all_products, name='products')
 ]
