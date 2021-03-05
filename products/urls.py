@@ -1,9 +1,7 @@
-from django.urls import path, include
+from django.urls import path
 from . import views
 
-
-# . means to import from the current directory
-
 urlpatterns = [
-    path('', views.all_products, name='products')
+    path('', views.all_products, name='products'),
+    path('<product_id>', views.product_detail, name='product_detail'),
 ]
