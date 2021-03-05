@@ -75,17 +75,32 @@ a.category-badge > span.badge:hover {
     color: #fff !important;
 }
 
-/* -------------------------------- Media Queries */
+.btt-button {
+    bottom: 10px;
+    height: 42px;
+    position: fixed;
+    right: 10px;
+    width: 42px;
+}
 
-/* Slightly larger container on xl screens */
+.btt-link {
+    cursor: pointer;
+}
+
+
+/* Media Queries */
+
+/* Larger container on xl screens */
 @media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
+
+    .container {
+        max-width: 80%;
+    }
 }
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
+
     .fixed-top-desktop-only {
         position: fixed;
         top: 0;
@@ -101,6 +116,7 @@ a.category-badge > span.badge:hover {
 
 /* adding padding to the top when navbar is collapsed on mobile */
 @media (max-width:991px) {
+    
     .header-container {
         padding-top: 116px;
     }
