@@ -48,6 +48,19 @@ body {
     color: white;
 }
 
+.btn-outline-black {
+    background: #fff;
+    border: 1px solid #000;
+    color: #000 !important;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: #222;
+    color: #fff;
+}
+
 .text-black {
     color: #000 !important;
 }
