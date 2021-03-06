@@ -89,6 +89,7 @@ a.category-badge > span.badge:hover {
 }
 
 .btt-button {
+    /* Back to Top Link */
     bottom: 10px;
     height: 42px;
     position: fixed;
@@ -96,7 +97,9 @@ a.category-badge > span.badge:hover {
     width: 42px;
 }
 
-.btt-link {
+.btt-link,
+.update-link,
+.remove-item {
     cursor: pointer;
 }
 
