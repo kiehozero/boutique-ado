@@ -18,7 +18,7 @@ class Order(models.Model):
     street_address2 = models.CharField(max_length=80, null=True, blank=True)
     county = models.CharField(max_length=80, null=True, blank=True)
     date = models.DateTimeField(
-        auto_now_add=True)  # automatically sets date and time at point of order
+        auto_now_add=True)  # automatically sets date and time upon order
     # below items are updated as this model iterates through the items in the
     # OrderLineItem model below.
     delivery_cost = models.DecimalField(
