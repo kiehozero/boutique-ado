@@ -5,10 +5,10 @@ from .models import Order
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
-        fields = ('full_name', 'email',
-                  'phone_number', 'country', 'postcode',
-                  'town_or_city', 'street_address1',
-                  'street_address2', 'county', )
+        fields = ('full_name', 'email', 'phone_number',
+                  'street_address1', 'street_address2',
+                  'town_or_city', 'postcode', 'country',
+                  'county',)
 
     def __init__(self, *args, **kwargs):
         """
@@ -28,11 +28,9 @@ class OrderForm(forms.ModelForm):
             'county': 'County',
         }
 
-        # widge.attrs sets the starting point for the cursor on load
         self.fields['full_name'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if self.fields[field].required:
-                # adds an asterisk if the field is mandators
                 placeholder = f'{placeholders[field]} *'
             else:
                 placeholder = placeholders[field]
