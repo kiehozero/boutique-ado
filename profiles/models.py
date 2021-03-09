@@ -6,8 +6,6 @@ from django.dispatch import receiver
 from django_countries.fields import CountryField
 
 
-
-
 class UserProfile(models.Model):
     """ User profile model for maintaining default
     delivery information and order history """
