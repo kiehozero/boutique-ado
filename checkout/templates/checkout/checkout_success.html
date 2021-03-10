@@ -193,6 +193,7 @@
         </div>
     </div>
 
+<<<<<<< HEAD
     <div class="row">
         <div class="col-12 col-lg-7 text-right">
             {% if from_profile %}
@@ -215,6 +216,31 @@
             </a>
             {% endif %}
         </div>
+=======
+        <div class="row">
+			<div class="col-12 col-lg-7 text-right">
+                {% if from_profile %}
+                <!-- If the user has come to this template from the order history
+                    view, they will see a button that sends them to their profile -->
+                    <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
+                        <span class="icon mr-2">
+                            <i class="fas fa-angle-left"></i>
+                        </span>
+                        <span class="text-uppercase">Go back to your profile</span>
+                    </a>
+                {% else %}
+                <!-- If the user has come to this template upon completing an order,
+                    they will see this button to go and view the latest offers -->
+                    <a href="{% url 'products' %}?category=new_arrivals,deals,clearance" class="btn btn-black rounded-0 my-2">
+                        <span class="icon mr-2">
+                            <i class="fas fa-gifts"></i>
+                        </span>
+                        <span class="text-uppercase">Now check out the latest deals!</span>
+                    </a>
+                {% endif %}
+			</div>
+		</div>
+>>>>>>> 14689964ad0ebf1acd045a1ba2615433f58689f5
     </div>
 </div>
 {% endblock %}
