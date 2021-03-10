@@ -3,5 +3,22 @@
 }
 
 #profile-update-form input::placeholder {
-    color: grey;
+    color: #aab7c4;
+}
+
+#id_default_country,
+#id_default_country option:not(:first-child) {
+    color: #000;
+}
+
+#id_default_country option:first-child {
+    color: #aab7c4;
+}
+
+/* Order Summary */
+
+.order-history {
+    /* max-height equals height of profile form + submit button */
+    max-height: 416px; 
+    overflow-y:auto;
 }

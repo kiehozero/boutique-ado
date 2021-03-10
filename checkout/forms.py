@@ -25,13 +25,15 @@ class OrderForm(forms.ModelForm):
             'street_address1': 'Street Address 1',
             'street_address2': 'Street Address 2',
             'county': 'County, State or Province',
-            # no placeholder for country as it is now a drop-down from django_countries
+            # no placeholder for country as it is now
+            # a drop-down from django_countries
         }
 
         self.fields['full_name'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if field != 'country':
-                # no placeholder for country, see comment in placeholders dictionary
+                # no placeholder for country, see 
+                # comment in placeholders dictionary
                 if self.fields[field].required:
                     placeholder = f'{placeholders[field]} *'
                 else:

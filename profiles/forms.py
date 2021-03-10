@@ -20,13 +20,13 @@ class UserProfileForm(forms.ModelForm):
             'default_town_or_city': 'Town or City',
             'default_county': 'County, State or Province',
             'default_postcode': 'Postal Code',
-            # no placeholder for country as it is now a drop-down from django_countries
+            # no country placeholder as it is a drop-down from django_countries
         }
 
         self.fields['default_phone_number'].widget.attrs['autofocus'] = True
         for field in self.fields:
             if field != 'default_country':
-                # no placeholder for country, see comment in placeholders dictionary
+                # no country placeholder, see placeholders dictionary comment
                 if self.fields[field].required:
                     placeholder = f'{placeholders[field]} *'
                 else:
